@@ -1,61 +1,38 @@
-
-<!DOCTYPE html>
-<html>
-<head>
 <?php
-include("grp_header.php"); 
+  $title = "Travel Expert Home Page";
+ include("grpheader.php");
+ 
+
 ?>
-<link rel="stylesheet" type="text/css" href="grp_style.css">
 
 
-</head>
-<body>
-
-
-
-
-<div id='flyplane'></div><br/>
-
-
-
-
-
-<br/>
-<br/><br/><hr/><br/><br/>
-
-
+<section>
 <p align='center'>
 <img width=50% height=35% src="flyplane.png" border=2></img>
 
 
 </p>
+<section>
 
-
-
-<H1 align='center'>H1 Welcome Text Heading</H1>
-<p id='bodytext' >
-<table align='center' width=70%>
-<tr><td>
-This is where random text is randomly placed. This is where random text is randomly placed. This is where random text is randomly placed. This is where random text is randomly placed.
-Yes this is where random text is randomly placed. This is where random text is randomly placed. This is where random text is randomly placed. This is where random text is randomly placed. 
-This is where random text is randomly placed. This is where random text is randomly placed. This is where random text is randomly placed. This is where random text is randomly placed. 
-This is where random text is randomly placed. This is where random text is randomly placed. This is where random text is randomly placed. This is where random text is randomly placed. 
-</td></tr>
-
-<tr><td>
-<H2 align='center'>H2 Heading</H2>
-This is where random text is randomly placed. This is where random text is randomly placed. This is where random text is randomly placed. This is where random text is randomly placed. 
-This is where random text is randomly placed. This is where random text is randomly placed. This is where random text is randomly placed. 	
-</td></tr>
-</table>	
-
-</p>
+<div class="booknow">
+     <div class="container">
+	 <a href="grpbook.php"><p>Start your journey now!</p></a>
+	 </div>
+</div>
 
 
 
 
-</body>
-</html>
+</div>
+
+
+
+
+<?php
+  require("grpfooter.php");
+?>
+
+
 
 
 
