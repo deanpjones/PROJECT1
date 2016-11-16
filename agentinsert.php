@@ -109,8 +109,31 @@
       		 <td>Agent Position:</td><td><input type="text" id="position" name="AgtPosition"  onfocus="showHideInfo('ap', 'visible')" onblur="showHideInfo('ap', 'hidden')" /></td>
         </tr>
         <tr>
-      		 <td>Agency Id:</td><td><input type="text" id="agency" name="AgencyId"  onfocus="showHideInfo('ai', 'visible')" onblur="showHideInfo('ai', 'hidden')" /></td>
-        </tr>
+      		 <!--<td>Agency Id:</td><td><input type="text" id="agency" name="AgencyId"  onfocus="showHideInfo('ai', 'visible')" onblur="showHideInfo('ai', 'hidden')" /></td>-->
+               <td>Agency Id:</td><td><select name="AgencyId">
+					<?php
+
+						$dbh = mysqli_connect($host, $user, $password, $database); //handle
+						if(!$dbh)
+						{
+						  print(mysqli_connect_error());
+						}
+						$sql="select AgencyId, AgncyAddress, AgncyCity, AgncyProv, AgncyCountry from agencies";
+						$result = mysqli_query($dbh, $sql);
+						if(!$result)
+						{
+							myqli_error($dbh);
+						}
+						while($row = mysqli_fetch_row($result)) //stores query results as enum array
+						  {
+							print("<option value='$row[0]'>$row[1],\n $row[2], $row[3], $row[4]</option>");
+						  }
+
+						  mysqli_close($dbh);
+						   ?>
+						 </select>
+					   </td>
+	    </tr>
         <tr>
            <td>Agent User Id:</td><td><input type="text" id="userid" name="AgtUserId"  onfocus="showHideInfo('au', 'visible')" onblur="showHideInfo('au', 'hidden')" /></td>
         </tr>
