@@ -8,7 +8,13 @@
   <div class="rform"> 
   <!--Construct an HTML form page that will allow the user to enter the data --> 
 	  <form class="form-horizontal" method="post" action="checkcustomerlogin.php">
-		  <div class="row">
+	      <div class="row" style="margin-bottom:1%;">
+		     <div class="col-sm-3 col-md-offset-4" >
+		        <h3 style="color: white;text-shadow: 1px 1px 2px black, 0 0 25px red, 0 0 5px darkblue;font-family:Broadway;">Customer Sign In</h3>
+		     </div>
+		  </div>
+		  <div class="row" style="margin-bottom:5%;">
+		     <div class="col-sm-3 col-md-offset-4" >
 		  <?php
 		  
 				  if(isset($_SESSION["loginmessage"]))
@@ -17,7 +23,8 @@
 					unset($_SESSION['loginmessage']);
 				}
 		  
-		  ?> 
+		  ?>
+             </div>		  
 		  </div>
 		  <div class="form-group">
 			  <label class="col-sm-4 control-label" for="username">User Name:</label>

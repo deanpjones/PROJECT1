@@ -18,10 +18,10 @@
 			   print(mysqli_connect_error()); 
 			   exit;
 		   }
-		   $sql = "select * from customers where CustUserName='$_SESSION[user]'";
+		   $sql = "select * from customers where CustUserName=?";
 		   //retrieve the related customer data 
 		   $stmt = mysqli_prepare($dbh,$sql);
-		   mysqli_stmt_bind_param($stmt,"i",$_REQUEST["CustomerId"]);
+		   mysqli_stmt_bind_param($stmt,"i",$_SESSION["user"]);
 		   mysqli_execute($stmt);
 		 
 		  mysqli_stmt_bind_result($stmt,$custid,$fname,$lname,$address,$city,$prov,$postal,$country,$hphone,$bphone,$email,$agentid);
@@ -53,7 +53,7 @@
 	 </div>
 	  <!--Construct an HTML form page that will allow the user to enter the data --> 
 	  <div class="rform">
-	 <form class="form-horizontal" action="processcustomerupdate.php" method="get" >
+	 <form class="form-horizontal" action="processsignincustomerupdate.php" method="get" >
 	 <div class="form-group" >
 	  <label class="col-sm-4 control-label" for="custid">Customer ID</label>
        <div class="col-sm-3">  	  

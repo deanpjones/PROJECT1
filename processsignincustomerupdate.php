@@ -52,7 +52,7 @@
 			  
 		   }
 		 
-	      header("Location: customerupdate.php?CustomerId=$_REQUEST[CustomerId]");
+	      header("Location: signincustomerupdate.php?CustUserName=$_SESSION[user]");
 	   }
    }
 ?>

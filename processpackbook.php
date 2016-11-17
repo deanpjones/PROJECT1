@@ -5,23 +5,31 @@
    include("signinheader.php");
    include("signinmenu.php");
    include("functions.php");
-  
+   $message = "";
    function validate()
    {
-      if ($_REQUEST["Adult"] == "")
+       global $message;
+	 if ($_REQUEST["Adult"] == "")
 	  {
-	     $message = "Please select the number of adults<br />";
-		 return false;
+	     $message .= "Please select the number of adults<br />";
+		 
 	  }
      
-       return true;
+       if($message)
+	  {
+		  return false;
+	  }
+	  else{
+		  return true;
+	  }
       
 	 
    }
    
    if (!isset($_REQUEST['BookingDate']))
    {
-      header("Location: grppackbook.php");
+      $_SESSION["loginmessage"]="You must enter booking date";
+	  header("Location: grppackbook.php");
    }
    else
    {
@@ -39,7 +47,8 @@
 	   }
 	   else
 	   {
-	      header("Location: grppackbook.php");
+	      $_SESSION["loginmessage"]=$message;
+		  header("Location: grppackbook.php");
 	   }
    }
 ?>

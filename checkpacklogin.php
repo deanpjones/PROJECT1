@@ -30,7 +30,7 @@ if(!isset($_REQUEST["CustUserName"]))
 {
 	$_SESSION["loginmessage"]="you must login first";
 	
-	header("Location:customerlogin.php");
+	header("Location:packlogin.php");
 }
 else
 {   
@@ -60,7 +60,7 @@ else
 	  {
 		  $_SESSION["loginmessage"]="Invalid user or password";
 	
-	     header("Location:customerlogin.php");
+	     header("Location:packlogin.php");
 	  }
        else
        {
@@ -82,7 +82,7 @@ else
 	{
 		$_SESSION["loginmessage"]="Invalid user or password";
 	
-	     header("Location:customerlogin.php");
+	     header("Location:packlogin.php");
 	}
 	mysqli_close($dbh);
 	}
@@ -91,7 +91,7 @@ else
 		$_SESSION["loginmessage"]=$message;
 	
 	
-	     header("Location:customerlogin.php");
+	     header("Location:packlogin.php");
 	}
 	
 	

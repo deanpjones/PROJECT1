@@ -8,27 +8,45 @@
 	 
 ?>
  
- <h1 style="margin-left:32%">Payment Info</h1>
+    
 	 <div>
 	 </div>
 	<div class="rform">
 		<form class="form-horizontal" action="processcredicard.php" method="get" >
-			<div class="form-group" >
+			<div class="row" style="margin-bottom:1%;">
+		        <div class="col-sm-3 col-md-offset-4" >
+		            <h3 style="color: white;text-shadow: 1px 1px 2px black, 0 0 25px red, 0 0 5px darkblue;font-family:Broadway;">Pay for Package</h3>
+		        </div>
+		    </div>
+		    <!--<div class="row" style="margin-bottom:5%;">
+		        <div class="col-sm-3 col-md-offset-4" >
+					  <?php
+					  
+							 /* if(isset($_SESSION["loginmessage"]))
+							{
+								print("<h5 style='text-align:center;margin-bottom:30px;color:#ff00ff;'>$_SESSION[loginmessage]</h5>");
+								unset($_SESSION['loginmessage']);
+							}*/
+					  
+					  ?>
+                </div>		  
+		    </div>-->
+			<div class="form-group required" >
 					<label class="col-sm-4 control-label" for="CCName">Credicard Name</label>
 						<div class="col-sm-3">  	  
-						 <input type="text" class="form-control" name="CCName" id="CCName" /> 
+						 <input type="text" required="required" class="form-control" name="CCName" id="CCName" /> 
 						</div>
 			</div>
-			<div class="form-group" >
+			<div class="form-group required" >
 					 <label class="col-sm-4 control-label" for="CCNumber">Credicard Number</label> 
 						<div class="col-sm-3">  
-							<input type="text" class="form-control" name="CCNumber" id="CCNumber" /> 
+							<input type="text"  required="required" pattern="[0-9]{16}" title="credicard number must be 16 digits" class="form-control" name="CCNumber" id="CCNumber" /> 
 						</div>
 			</div>
-			<div class="form-group" >
+			<div class="form-group required" >
 					 <label class="col-sm-4 control-label" for="CCExpiry">Credicard Expiry Date</label> 
 						<div class="col-sm-3">  
-							<input type="date" class="form-control" name="CCExpiry" id="CCExpiry" /> 
+							<input type="date" required="required" class="form-control"  name="CCExpiry" id="CCExpiry" /> 
 						</div>
 			</div>
 	 

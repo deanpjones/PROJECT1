@@ -5,10 +5,11 @@
    include("signinheader.php");
    include("signinmenu.php");
    include("functions.php");
-
+    $message = "";
    function validate()
    {
-      if ($_REQUEST["CCNumber"] == "")
+        global $message;
+	  if ($_REQUEST["CCNumber"] == "")
 	  {
 	     $message = "Please enter your credicard number<br />";
 		 return false;
@@ -23,7 +24,8 @@
    
    if (!isset($_REQUEST['CCName']))
    {
-      header("Location:credicard.php");
+      $_SESSION["loginmessage"]="You must enter creditcard name";
+	  header("Location:credicard.php");
    }
    else
    {
@@ -41,7 +43,8 @@
 	   }
 	   else
 	   {
-	      header("Location: credicard.php");
+	      $_SESSION["loginmessage"]=$message;
+		  header("Location: credicard.php");
 	   }
    }
 ?>

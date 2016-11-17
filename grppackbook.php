@@ -1,21 +1,39 @@
 <!--Author:Hua Hong  Course Code:CPRG207 PHP-->
 <?php
-session_start();
+     session_start();
 
-$title="Travel Experts Package Book";
+     $title="Travel Experts Package Book";
      include("signinheader.php");
 	 include("signinmenu.php");
      include("variable.php");
 	 
 ?>
  
- <h1 style="margin-left:32%">Book a Vacation</h1>
+ 
 	  <div class="rform">
 		<form class="form-horizontal" action="processpackbook.php" method="get" >
-			<div class="form-group" >
+		    <div class="row" style="margin-bottom:1%;">
+		        <div class="col-sm-3 col-md-offset-4" >
+		            <h3 style="color: white;text-shadow: 1px 1px 2px black, 0 0 25px red, 0 0 5px darkblue;font-family:Broadway;">Book a Vacation</h3>
+		        </div>
+		    </div>
+		    <!--<div class="row" style="margin-bottom:5%;">
+		        <div class="col-sm-3 col-md-offset-4" >
+					  <?php
+					  
+							  /*if(isset($_SESSION["loginmessage"]))
+							{
+								print("<h5 style='text-align:center;margin-bottom:30px;color:#ff00ff;'>$_SESSION[loginmessage]</h5>");
+								unset($_SESSION['loginmessage']);
+							}*/
+					  
+					  ?>
+                </div>		  
+		    </div>-->
+			<div class="form-group required" >
 					<label class="col-sm-4 control-label" for="bookingdate">Booking Date</label>
 						<div class="col-sm-3">  	  
-						 <input type="date" class="form-control" name="BookingDate" id="bookingdate" /> 
+						 <input type="date" class="form-control" required="required" name="BookingDate" id="bookingdate" /> 
 						</div>
 			 </div>
 			 <div class="form-group" >
@@ -24,10 +42,10 @@ $title="Travel Experts Package Book";
 							<input type="text" class="form-control" name="BookingNo" id="bookingno" /> 
 						</div>
 			 </div>
-			 <div class="form-group" >
+			 <div class="form-group required" >
 					  <label class="col-sm-4 control-label" for="adult">Adult(12+)</label>
 					   <div class="col-sm-3">
-					   <select class="form-control" id="adult" name="Adult" >
+					   <select class="form-control" id="adult" required="required" name="Adult" >
 										 <option ></option>
 										 <option  >0</option>
 										 <option  >1</option>
@@ -50,10 +68,10 @@ $title="Travel Experts Package Book";
 					  </select>
 				  </div>
 				</div>
-				<div class="form-group" >
+				<div class="form-group required" >
 				  <label class="col-sm-4 control-label" for="customerid">CustomerId</label>
 					<div class="col-sm-3">
-					  <select name="CustomerId" id="customerid" class="form-control" >
+					  <select name="CustomerId" required="required" id="customerid" class="form-control" >
 						<?php
 							 $dbh = mysqli_connect($host, $user, $password, $database);
 							 //put connection checking here
@@ -77,10 +95,10 @@ $title="Travel Experts Package Book";
 					   </select>
 					</div>
 				</div>
-				<div class="form-group" >
+				<div class="form-group required" >
 				  <label class="col-sm-4 control-label" for="triptype">Trip Type</label>
 				  <div class="col-sm-3">
-				   <select name="TripTypeId" id="triptype" class="form-control" >
+				   <select name="TripTypeId" required="required" id="triptype" class="form-control" >
 						<?php
 							 $dbh = mysqli_connect($host, $user, $password, $database);
 							 //put connection checking here
@@ -104,10 +122,10 @@ $title="Travel Experts Package Book";
 				   </select>
 				  </div>
 				</div>
-				<div class="form-group">
+				<div class="form-group required"">
 				  <label class="col-sm-4 control-label" for="packageid">PackageId</label>
 				  <div class="col-sm-3">
-				   <select name="PackageId" id="packageid" class="form-control" >
+				   <select name="PackageId" required="required" id="packageid" class="form-control" >
 						<?php
 							 $dbh = mysqli_connect($host, $user, $password, $database);
 							 //put connection checking here
