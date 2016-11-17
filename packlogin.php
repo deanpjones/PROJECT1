@@ -42,7 +42,7 @@
 	    </form>
     </div>
     <div>
-	    <h4 style='margin-left:37%;margin-bottom:30px;'>Don't have an account?<a href="custregister.php"> Register</a></h4>
+	    <h4 style='margin-left:37%;margin-bottom:30px;'>Don't have an account?<a href="newcustomerregisterforbooking.php"> Register</a></h4>
     </div>
 	<?php
        require("grpfooter.php");

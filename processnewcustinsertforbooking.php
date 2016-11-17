@@ -15,7 +15,7 @@
 	   
 		   if (insertData($_REQUEST, "customers"))
 		   {
-			  header("Location:grp_index.php");
+			  header("Location:packlogin.php");
 		   }
 		   else
 		   {
