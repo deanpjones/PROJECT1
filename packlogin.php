@@ -41,9 +41,9 @@
 		    <input type="submit" value="Sign In"/>
 	    </form>
     </div>
-   <!-- <div>
+    <div>
 	    <h4 style='margin-left:37%;margin-bottom:30px;'>Don't have an account?<a href="custregister.php"> Register</a></h4>
-    </div>-->
+    </div>
 	<?php
        require("grpfooter.php");
     ?>

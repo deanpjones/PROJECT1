@@ -15,7 +15,7 @@
 	   
 		   if (insertData($_REQUEST, "customers"))
 		   {
-			  header("Location: dj_customer_register_successful_cust.php");
+			  header("Location: packlogin.php");
 		   }
 		   else
 		   {
