@@ -2,6 +2,7 @@
 /*Author:Ryan*/
    session_start();
    require("grpheader.php");
+   include("mainmenu.php");
    if (isset($_SESSION["loginmessage"]))
    {
       print("<h2>$_SESSION[loginmessage]</h2>");

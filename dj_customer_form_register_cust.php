@@ -41,7 +41,7 @@
 				<article style="margin-left: 27%">			
 					<!--
 					`CustomerId`, `CustFirstName`, `CustLastName`, `CustAddress`, `CustCity`, 
-							`CustProv`, `CustPostal`, `CustCountry`, `CustHomePhone`, `CustBusPhone`, `CustEmail`, `AgentId`
+							`CustProv`, `CustPostal`, `CustCountry`, `CustHomePhone`, `CustBusPhone`, `CustEmail`, `AgentId`,
 					-->
 				<!--ADDED (ONSUBMIT) TO FORM, instead of SEND BUTTON -->
 				<form method="post" name="cust_form" action="dj_customer_tester_cust.php" onsubmit="return validateForm()">
@@ -125,6 +125,17 @@
 							<td> <input id="email" type="text" name="CustEmail" placeholder="name.last@email.com" onfocus="myinfoON('Email')" onfocusout="myinfoOFF('Email')" /> </td>
 							<td id="Email"></td>
 						</tr>
+						<tr>
+							<td> User ID: </td>
+							<td> <input id="UserId" type="text" name="CustUserName" placeholder="enter user name" /> </td>
+							<td id="CustUserName"></td>
+						</tr>
+						<tr>
+							<td> Password: </td>
+							<td> <input id="Password" type="text" name="CustPassword" placeholder="enter password" /> </td>
+							<td id="CustPassword"></td>
+						</tr>
+						
 						<tr>
 							<!--- BUTTONS --->
 							<!-- <td> <input type="submit" value="Send" /> </td> -->

@@ -17,7 +17,7 @@
 		  <li><a href="dj_customer_form_list.php">Customer Update</a></li>
 		  <li><a href="agentinsert.php">Agent Insert</a></li>
 		  <li><a href="agentupdate.php">Agent Update</a></li>
-		  <li><a href="grp_index.php">Sign Off</a></li>
+		  <li><a href="logout.php">Sign Off</a></li>
 	  </ul>
 
 </nav>

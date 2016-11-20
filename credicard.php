@@ -32,19 +32,19 @@
                 </div>		  
 		    </div>-->
 			<div class="form-group required" >
-					<label class="col-sm-4 control-label" for="CCName">Credicard Name</label>
+					<label class="col-sm-4 control-label" for="CCName">Credit card Name</label>
 						<div class="col-sm-3">  	  
 						 <input type="text" required="required" class="form-control" name="CCName" id="CCName" /> 
 						</div>
 			</div>
 			<div class="form-group required" >
-					 <label class="col-sm-4 control-label" for="CCNumber">Credicard Number</label> 
+					 <label class="col-sm-4 control-label" for="CCNumber">Credit card Number</label> 
 						<div class="col-sm-3">  
-							<input type="text"  required="required" pattern="[0-9]{16}" title="credicard number must be 16 digits" class="form-control" name="CCNumber" id="CCNumber" /> 
+							<input type="text"  required="required" pattern="[0-9]{16}" title="creditcard number must be 16 digits" class="form-control" name="CCNumber" id="CCNumber" /> 
 						</div>
 			</div>
 			<div class="form-group required" >
-					 <label class="col-sm-4 control-label" for="CCExpiry">Credicard Expiry Date</label> 
+					 <label class="col-sm-4 control-label" for="CCExpiry">Credit card Expiry Date</label> 
 						<div class="col-sm-3">  
 							<input type="date" required="required" class="form-control"  name="CCExpiry" id="CCExpiry" /> 
 						</div>
